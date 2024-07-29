@@ -1,13 +1,10 @@
 const express = require('express');
 const axios = require('axios');
-const cors = require('cors');
 
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
 
-// Endpoint to fetch product data from Fake Store API
 app.get('/api/products', async (req, res) => {
     try {
         const response = await axios.get('https://fakestoreapi.com/products');
